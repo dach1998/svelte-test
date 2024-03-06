@@ -2,9 +2,11 @@
     <div class="nav-container">
         <a href="/" class="nav-logo" title="Back to Homepage">Данил Чижма</a>
         <div class="nav-links">
-            {#if link.isShow}
-            <a href={link.href} class="link">{link.title}</a>
-            {/if}
+            {#each nav as link}
+                {#if link.isShow}
+                    <a href={link.href} class="link">{link.title}</a>
+                {/if}
+            {/each}
         </div>
     </div>
 </nav>
@@ -35,22 +37,22 @@
         {
             title: 'Обо мне',
             href: '/about',
-            isShow: false,
+            isShow: true,
         },
         {
             title: 'Блог',
             href: '/blog',
-            isShow: false,
+            isShow: true,
         },
         {
             title: 'Портфолио',
             href: '/project',
-            isShow: false,
+            isShow: true,
         },
         {
             title: 'Контакты',
             href: '/contact',
-            isShow: false,
+            isShow: true,
         },
         {
             title: 'temp',
