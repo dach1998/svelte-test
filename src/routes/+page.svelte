@@ -15,7 +15,7 @@
                 <h2 class="subtitle">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus consequuntur pariatur quisquam, laborum amet illo iusto nesciunt odit quibusdam quaerat, sapiente repudiandae ipsa nobis iure!
                 </h2>
-                <div style="color:black" class="scroll-button animate-scroll" tabindex="0">
+                <div style="color:black" class="scroll-button animate-scroll">
                     <a href="/about">Click Here</a>
                     <div class="arrow">&#10145;</div>
                 </div>
