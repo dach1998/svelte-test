@@ -19,6 +19,15 @@
         max-width: 1400px;
         margin: 50px auto;
     }
+
+    .link {
+        margin-right: 10px;
+        transition: 0.3s ease;
+    }
+
+    .link:hover {
+        border-bottom: 2px solid black;
+    }
 </style>
 
 <script>
