@@ -2,10 +2,9 @@
     <div class="nav-container">
         <a href="/" class="nav-logo" title="Back to Homepage">Данил Чижма</a>
         <div class="nav-links">
-            <a href="/about" class="link">Обо мне</a>
-            <a href="/blog" class="link">Блог</a>
-            <a href="/projects" class="link">Портфолио</a>
-            <a href="/contact" class="link">Контакты</a>
+            {#each nav as link}
+            <a href={link.href} class="link">{link.title}</a>
+            {/each}
         </div>
     </div>
 </nav>
@@ -21,3 +20,24 @@
         margin: 50px auto;
     }
 </style>
+
+<script>
+    const nav = [
+        {
+            title: 'Обо мне',
+            href: '/about'
+        },
+        {
+            title: 'Блог',
+            href: '/blog'
+        },
+        {
+            title: 'Портфолио',
+            href: '/project'
+        },
+        {
+            title: 'Контакты',
+            href: '/contact'
+        }
+    ]
+</script>
