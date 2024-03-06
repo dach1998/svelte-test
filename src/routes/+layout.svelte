@@ -2,9 +2,9 @@
     <div class="nav-container">
         <a href="/" class="nav-logo" title="Back to Homepage">Данил Чижма</a>
         <div class="nav-links">
-            {#each nav as link}
+            {#if link.isShow}
             <a href={link.href} class="link">{link.title}</a>
-            {/each}
+            {/if}
         </div>
     </div>
 </nav>
@@ -22,7 +22,7 @@
 
     .link {
         margin-right: 10px;
-        transition: 0.3s ease;
+        transition: 0.8s ease;
     }
 
     .link:hover {
@@ -34,19 +34,28 @@
     const nav = [
         {
             title: 'Обо мне',
-            href: '/about'
+            href: '/about',
+            isShow: false,
         },
         {
             title: 'Блог',
-            href: '/blog'
+            href: '/blog',
+            isShow: false,
         },
         {
             title: 'Портфолио',
-            href: '/project'
+            href: '/project',
+            isShow: false,
         },
         {
             title: 'Контакты',
-            href: '/contact'
+            href: '/contact',
+            isShow: false,
+        },
+        {
+            title: 'temp',
+            href: '/temp',
+            isShow: false,
         }
     ]
 </script>
