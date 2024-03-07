@@ -160,7 +160,9 @@
 
     .add-todo {
         padding: 6px 8px;
-        background-color: none;
+        background-color: #fff;
         border: none;
+        border: 2px solid black;
+        border-radius: 6px;
     }
 </style>
