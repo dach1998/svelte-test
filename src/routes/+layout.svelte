@@ -17,9 +17,14 @@
 </div>
 
 <style>
-    .container {
+    .nav-container {
         max-width: 1400px;
         margin: 50px auto;
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
         background-color: white;
         z-index: 2;
         box-shadow: 0 5px black;
