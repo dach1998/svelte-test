@@ -159,10 +159,12 @@
     }
 
     .add-todo {
-        padding: 6px 8px;
         background-color: #fff;
-        border: none;
-        border: 2px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
         border-radius: 6px;
+        margin-left: 5px;
     }
 </style>
