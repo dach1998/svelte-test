@@ -20,6 +20,9 @@
     .container {
         max-width: 1400px;
         margin: 50px auto;
+        background-color: white;
+        z-index: 2;
+        box-shadow: 0 5px black;
     }
 
     .link {
