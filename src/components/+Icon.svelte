@@ -12,3 +12,4 @@
     ];
     let icon = icons.find((item) => item.name === name);
 </script>
+x
