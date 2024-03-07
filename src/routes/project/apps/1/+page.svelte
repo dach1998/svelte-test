@@ -160,5 +160,7 @@
         border-radius: 6px;
         background-color: rgb(12, 225, 72);
         border: none;
+        padding: 6px;
+        columns: white;
     }
 </style>
