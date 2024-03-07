@@ -155,4 +155,10 @@
         width: 100%;
         max-width: 500px;
     }
+
+    .add-todo {
+        border-radius: 6px;
+        background-color: rgb(12, 225, 72);
+        border: none;
+    }
 </style>
