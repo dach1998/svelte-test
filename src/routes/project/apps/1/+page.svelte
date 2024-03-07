@@ -1,5 +1,5 @@
 <script>
-    import Icon from '../../../../components/Icon.svelte'; // Укажите правильный путь к вашему компоненту Icon.svelte
+    import Icon from '../../../../components/Icon.svelte';
 
     let newItem = '';
     let todoList = [];
@@ -38,14 +38,14 @@
         {#each todoList as item, index}
             <div class="todo" class:completed={item.completed}>
                 <span class="todo__text">{item.task}</span>
-            </div>
-            <div class="todo__buttons">
-                <button class="complete" on:click={()=>complete(index)}>
-                    <Icon name="check" />
-                </button>
-                <button class="delete" on:click={()=>remove(index)}>
-                    <Icon name="delete" />
-                </button>
+                <div class="todo__buttons">
+                    <button class="complete" on:click={()=>complete(index)}>
+                        <Icon name="check" />
+                    </button>
+                    <button class="delete" on:click={()=>remove(index)}>
+                        <Icon name="delete" />
+                    </button>
+                </div>
             </div>
         {/each}
     </div>
@@ -98,15 +98,23 @@
     .todo__buttons {
         display: flex;
         align-items: center;
-        margin-left: 1rem;
     }
 
     .todo button {
-        width: 32px;
-        height: 32px;
-        padding: 4px;
+        padding: 0; /* Удаляем внутренние отступы кнопок */
         margin: 0;
-        flex-shrink: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .todo button:focus {
+        outline: none;
+    }
+
+    .todo button .icon {
+        width: 24px; /* Размер иконки */
+        height: 24px;
     }
 
     h1 {
@@ -115,32 +123,32 @@
         margin: 2em 0;
     }
 
-    button {
-        background-color: transparent;
-        border: none;
+    .delete .icon {
+        color: brown;
     }
 
-    button.delete,
-    button.delete:hover {
-        color: brown;
-        transition: color 100ms ease-out;
+    .delete .icon:hover {
+        color: darkred;
     }
-    button.complete,
-    button.complete:hover {
+
+    .complete .icon {
         color: cadetblue;
-        transition: color 100ms ease-out;
+    }
+
+    .complete .icon:hover {
+        color: darkcyan;
     }
 
     .todo.completed {
         color: slategray;
     }
 
-    .todo.completed.todo__text {
+    .todo.completed .todo__text {
         text-decoration: line-through;
     }
 
     .todo.completed button {
-        color: silver;
+        pointer-events: none; /* Отключаем возможность клика на кнопки в завершенных задачах */
     }
 
     .todos {
