@@ -60,21 +60,21 @@
     <div class="calculator">
         <div class="display">{displayValue}</div>
         <div class="buttons">
-            <button on:click={() => inputDigit('7')}>7</button>
-            <button on:click={() => inputDigit('8')}>8</button>
-            <button on:click={() => inputDigit('9')}>9</button>
-            <button on:click={() => inputDigit('4')}>4</button>
-            <button on:click={() => inputDigit('5')}>5</button>
-            <button on:click={() => inputDigit('6')}>6</button>
-            <button on:click={() => inputDigit('1')}>1</button>
-            <button on:click={() => inputDigit('2')}>2</button>
-            <button on:click={() => inputDigit('3')}>3</button>
-            <button on:click={() => inputDigit('0')}>0</button>
-            <button on:click={inputDecimal}>.</button>
-            <button on:click={() => performOperation('+')}>+</button>
-            <button on:click={() => performOperation('-')}>-</button>
-            <button on:click={() => performOperation('*')}>*</button>
-            <button on:click={() => performOperation('/')}>/</button>
+            <button class="digit" on:click={() => inputDigit('7')}>7</button>
+            <button class="digit" on:click={() => inputDigit('8')}>8</button>
+            <button class="digit" on:click={() => inputDigit('9')}>9</button>
+            <button class="digit" on:click={() => inputDigit('4')}>4</button>
+            <button class="digit" on:click={() => inputDigit('5')}>5</button>
+            <button class="digit" on:click={() => inputDigit('6')}>6</button>
+            <button class="digit" on:click={() => inputDigit('1')}>1</button>
+            <button class="digit" on:click={() => inputDigit('2')}>2</button>
+            <button class="digit" on:click={() => inputDigit('3')}>3</button>
+            <button class="zero digit" on:click={() => inputDigit('0')}>0</button>
+            <button class="digit" on:click={inputDecimal}>.</button>
+            <button class="operator" on:click={() => performOperation('+')}>+</button>
+            <button class="operator" on:click={() => performOperation('-')}>-</button>
+            <button class="operator" on:click={() => performOperation('*')}>*</button>
+            <button class="operator" on:click={() => performOperation('/')}>/</button>
             <button class="equals" on:click={() => performOperation('=')}>=</button>
             <button class="clear" on:click={resetCalculator}>C</button>
         </div>
@@ -93,6 +93,7 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 10px;
+        width: 300px; /* ширина калькулятора */
     }
 
     .display {
@@ -107,22 +108,39 @@
 
     .buttons {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr); /* 4 колонки */
         gap: 5px;
     }
 
     .buttons button {
         padding: 10px;
         font-size: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #e0e0e0;
+        cursor: pointer;
     }
 
-    .buttons button.zero {
-        grid-column: span 2;
+    .digit,
+    .operator,
+    .equals,
+    .clear {
+        transition: background-color 0.3s;
+    }
+
+    .digit:hover,
+    .operator:hover,
+    .equals:hover,
+    .clear:hover {
+        background-color: #d0d0d0;
+    }
+
+    .zero {
+        grid-column: span 2; /* широкая кнопка */
     }
 
     .equals,
     .clear {
-        grid-column: span 3;
+        grid-column: span 4; /* кнопки "равно" и "сброс" занимают всю ширину */
     }
 </style>
-

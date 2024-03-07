@@ -3,10 +3,12 @@
         <div class="animate-background">
             <div class="container info-container">
                 <div class="info-text">
-                    <h1>
-                        <p class="animate-text-1">Добро пожаловать,</p>
-                        <p class="text-2">Меня зовут Данил, я начинающий Web-разработчик.</p>
-                    </h1>
+                    <div class="text-wrapper">
+                        <h1>
+                            <p class="animate-text-1">Добро пожаловать,</p>
+                            <p class="text-2">Меня зовут Данил, я начинающий Web-разработчик.</p>
+                        </h1>
+                    </div>
                 </div>
                 <h2 class="subtitle">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus consequuntur pariatur quisquam, laborum amet illo iusto nesciunt odit quibusdam quaerat, sapiente repudiandae ipsa nobis iure!
