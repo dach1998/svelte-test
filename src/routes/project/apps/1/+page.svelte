@@ -95,7 +95,7 @@
         align-items: center;
     }
 
-    .todo\_\_buttons {
+    .todo__buttons {
         display: flex;
         align-items: center;
         margin-left: 1rem;
@@ -135,7 +135,7 @@
         color: slategray;
     }
 
-    .todo.completed.todo\_\_text {
+    .todo.completed.todo__text {
         text-decoration: line-through;
     }
 
