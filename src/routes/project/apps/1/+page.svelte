@@ -1,4 +1,5 @@
 <script>
+    import Icon from '../../../../components/Icon.svelte';
     let newItem = '';
     let todoList = [];
     function add() {
@@ -14,7 +15,6 @@
         }
     }
 
-    import Icon from '../../../../components/Icon.svelte';
 
     function remove(index) {
         todoList.splice(index, 1);
