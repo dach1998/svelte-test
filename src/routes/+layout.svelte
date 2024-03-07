@@ -25,8 +25,10 @@
     .nav-container {
         max-width: 1400px;
         margin: 0 auto;
-        background: white !important;
         z-index: 5;
+    }
+    nav {
+        background: #FFF;
     }
 
     .link {
