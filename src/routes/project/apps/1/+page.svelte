@@ -1,5 +1,5 @@
 <script>
-    import Icon from '../../../../components/Icon.svelte'; // Make sure Icon component is correctly implemented
+    import Icon from '../../../../components/Icon.svelte'; // Укажите правильный путь к вашему компоненту Icon.svelte
 
     let newItem = '';
     let todoList = [];
@@ -9,8 +9,8 @@
             todoList = [
                 ...todoList,
                 {
-                    task: newItem, // Change 'задача' to 'task'
-                    completed: false, // Change 'завершено' to 'completed'
+                    task: newItem,
+                    completed: false,
                 },
             ];
             newItem = '';
@@ -19,12 +19,12 @@
 
     function remove(index) {
         todoList.splice(index, 1);
-        todoList = todoList.slice(); // Ensure reactivity by creating a new array
+        todoList = [...todoList]; // Создаем новый массив, чтобы обновить компонент
     }
 
     function complete(index) {
         todoList[index].completed = !todoList[index].completed;
-        todoList = todoList.slice(); // Ensure reactivity by creating a new array
+        todoList = [...todoList]; // Создаем новый массив, чтобы обновить компонент
     }
 </script>
 
@@ -41,7 +41,7 @@
             </div>
             <div class="todo__buttons">
                 <button class="complete" on:click={()=>complete(index)}>
-                    <Icon name="check-mark" />
+                    <Icon name="check" />
                 </button>
                 <button class="delete" on:click={()=>remove(index)}>
                     <Icon name="delete" />
@@ -50,6 +50,7 @@
         {/each}
     </div>
 </main>
+
 <style>
     main {
         display: flex;
