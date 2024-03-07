@@ -33,7 +33,7 @@
     <form on:submit|preventDefault={add}>
         <input bind:value={newItem} placeholder="Enter to-do" />
         <button class="add-todo" on:click={add}>
-            <Icon name="plus" /> <!-- Здесь используем иконку с плюсом -->
+            <Icon name="plus" />
         </button>
     </form>
     <div class="todos">
@@ -156,13 +156,5 @@
     .todos {
         width: 100%;
         max-width: 500px;
-    }
-
-    .add-todo {
-        border-radius: 6px;
-        background-color: rgb(12, 225, 72);
-        border: none;
-        padding: 6px 20px;
-        color: white;
     }
 </style>
