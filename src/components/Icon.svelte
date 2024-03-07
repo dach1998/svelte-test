@@ -7,6 +7,6 @@
     const icon = icons[name];
 </script>
 
-<div class="feather-icon" style="width: 24px; height: 24px;">
+<span class="feather-icon" style="width: 24px; height: 24px;">
     {@html icon.toSvg()}
-</div>
+</span>
