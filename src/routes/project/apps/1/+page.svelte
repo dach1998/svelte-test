@@ -15,11 +15,39 @@
     }
 </script>
 <main>
+    <h1>My to-do list</h1>
     <form on:submit|preventDefault={add}>
         <input bind:value={newItem} placeholder="Enter to-do" />
         <button class="add-todo" on:click={add}><span>+</span></button>
     </form>
+    <div class="todos">
+        {#each todoList as item, index}
+            <div class="todo" class:completed={item.completed}>
+                <span class="todo__text">{item.task}</span>
+            </div>
+            <div class="todo__buttons">
+                <button class="complete" on:click={()=>complete(index)}>
+                    <Icon name="check-mark" />
+                </button>
+                <button class="delete" on:click={()=>remove(index)}>
+                    <Icon name="delete" />
+                </button>
+            </div>
+        {/each}
+    </div>
 </main>
+<script>
+    import Icon from '../../../../components/Icon.svelte';
+
+    function remove(index) {
+        todoList.splice(index, 1);
+        todoList = todoList;
+    }
+    
+    function complete(index) {
+        todoList[index].completed = !todoList[index].completed;
+    }
+</script>
 <style>
     main {
         display: flex;
@@ -50,5 +78,70 @@
         font-size: 1.2rem;
         margin: 0;
         outline: none;
+    }
+
+    .todo {
+        display: flex;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+        background-color: hsla(0, 0%, 100%, 0.2);
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .todo\_\_buttons {
+        display: flex;
+        align-items: center;
+        margin-left: 1rem;
+    }
+
+    .todo button {
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 2em 0;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+    }
+
+    button.delete,
+    button.delete:hover {
+        color: brown;
+        transition: color 100ms ease-out;
+    }
+    button.complete,
+    button.complete:hover {
+        color: cadetblue;
+        transition: color 100ms ease-out;
+    }
+
+    .todo.completed {
+        color: slategray;
+    }
+
+    .todo.completed.todo\_\_text {
+        text-decoration: line-through;
+    }
+
+    .todo.completed button {
+        color: silver;
+    }
+
+    .todos {
+        width: 100%;
+        max-width: 500px;
     }
 </style>
