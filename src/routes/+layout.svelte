@@ -25,7 +25,7 @@
     .nav-container {
         max-width: 1400px;
         margin: 0 auto;
-        background-color: white;
+        background: white !important;
         z-index: 5;
     }
 
