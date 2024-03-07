@@ -1,5 +1,5 @@
 <script>
-    import Icon from '../../../../../components/Icon.svelte'; // Укажите правильный путь к вашему компоненту Icon.svelte
+    import Icon from '../../../../components/Icon.svelte'; // Укажите правильный путь к вашему компоненту Icon.svelte
 
     let newItem = '';
     let todoList = [];
