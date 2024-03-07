@@ -14,7 +14,7 @@
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus consequuntur pariatur quisquam, laborum amet illo iusto nesciunt odit quibusdam quaerat, sapiente repudiandae ipsa nobis iure!
                 </h2>
                 <div style="color:black" class="scroll-button animate-scroll" tabindex="0">
-                    <a href="/about">Больше обо мне </a><div class="arrow">&#10145;</div>
+                    <a href="/about">Больше обо мне &#10145;</a>
                 </div>
             </div>
         </div>
@@ -80,9 +80,5 @@
         position: relative;
         z-index: 1;
         margin-top: -50px; /* Отрицательный отступ сверху для перемещения текста над .background-div */
-    }
-
-    .scroll-button .arrow {
-        margin-left: 0.50rem;
     }
 </style>
