@@ -16,7 +16,7 @@
         .post {
             border-radius: 6px;
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 10px 20px;
             box-shadow: 0 0 10px #eee;
         }
 
