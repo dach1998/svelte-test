@@ -1,30 +1,33 @@
 <script>
-    import Icon from '../../../../components/Icon.svelte';
+    import Icon from '../../../../components/Icon.svelte'; // Make sure Icon component is correctly implemented
+
     let newItem = '';
     let todoList = [];
+
     function add() {
         if (newItem !== '') {
             todoList = [
                 ...todoList,
                 {
-                    задача: newItem,
-                    завершено: false,
+                    task: newItem, // Change 'задача' to 'task'
+                    completed: false, // Change 'завершено' to 'completed'
                 },
             ];
             newItem = '';
         }
     }
 
-
     function remove(index) {
         todoList.splice(index, 1);
-        todoList = todoList;
+        todoList = todoList.slice(); // Ensure reactivity by creating a new array
     }
 
     function complete(index) {
         todoList[index].completed = !todoList[index].completed;
+        todoList = todoList.slice(); // Ensure reactivity by creating a new array
     }
 </script>
+
 <main>
     <h1>My to-do list</h1>
     <form on:submit|preventDefault={add}>
@@ -47,7 +50,6 @@
         {/each}
     </div>
 </main>
-
 <style>
     main {
         display: flex;
