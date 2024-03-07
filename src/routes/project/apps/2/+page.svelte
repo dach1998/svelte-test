@@ -107,7 +107,7 @@
 
     .buttons {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 5px;
     }
 
@@ -116,8 +116,13 @@
         font-size: 20px;
     }
 
-    .equals,
-    .clear {
+    .buttons button.zero {
         grid-column: span 2;
     }
+
+    .equals,
+    .clear {
+        grid-column: span 3;
+    }
 </style>
+

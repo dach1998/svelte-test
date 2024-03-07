@@ -1,14 +1,10 @@
-<svelte:head>
-    <title>Данил Чижма</title>
-</svelte:head>
-
 <div class="container">
     <div class="info">
         <div class="animate-background">
             <div class="container info-container">
                 <div class="info-text">
                     <h1>
-                        <p class="animate-text-1">Добро пожаловать.</p>
+                        <p class="animate-text-1">Добро пожаловать,</p>
                         <p class="text-2">Меня зовут Данил, я начинающий Web-разработчик.</p>
                     </h1>
                 </div>
@@ -76,6 +72,12 @@
 
     .info .info-text {
         position: relative;
+    }
+
+    .text-2 {
+        position: relative;
+        z-index: 1;
+        margin-top: -50px; /* Отрицательный отступ сверху для перемещения текста над .background-div */
     }
 
     .scroll-button .arrow {
