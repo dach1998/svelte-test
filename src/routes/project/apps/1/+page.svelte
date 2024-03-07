@@ -14,7 +14,7 @@
         }
     }
 
-    import {Icon} from '../../../../components/+Icon.svelte';
+    import {Icon} from '../../../../components/Icon.svelte';
 
     function remove(index) {
         todoList.splice(index, 1);
