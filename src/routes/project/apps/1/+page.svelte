@@ -157,4 +157,10 @@
         width: 100%;
         max-width: 500px;
     }
+
+    .add-todo {
+        padding: 6px 8px;
+        background-color: none;
+        border: none;
+    }
 </style>
