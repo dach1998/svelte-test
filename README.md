@@ -1,3 +1,7 @@
+# Мой первый проект на Svelte
+```bash
+https://famous-clafoutis-b63970.netlify.app/
+```
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
