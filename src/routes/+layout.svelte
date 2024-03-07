@@ -17,7 +17,7 @@
 </div>
 
 <style>
-    .nav-container {
+    .container {
         max-width: 1400px;
         margin: 50px auto;
     }
@@ -26,8 +26,7 @@
         max-width: 1400px;
         margin: 0 auto;
         background-color: white;
-        z-index: 2;
-        box-shadow: 0 5px black;
+        z-index: 5;
     }
 
     .link {
